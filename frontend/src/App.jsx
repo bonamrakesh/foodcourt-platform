@@ -8,6 +8,8 @@ import Cart from './pages/Cart.jsx'
 import Checkout from './pages/Checkout.jsx'
 import OrderSuccess from './pages/OrderSuccess.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Admin from './pages/Admin.jsx'
+
 
 export default function App() {
   return (
@@ -15,6 +17,7 @@ export default function App() {
       <Navbar />
       <main>
         <Routes>
+          <Route path="/admin" element={<Admin />} />
           <Route path="/" element={<Home />} />
           <Route path="/restaurants" element={<Restaurants />} />
           <Route path="/restaurants/:restaurantId" element={<RestaurantPage />} />
