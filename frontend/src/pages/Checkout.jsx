@@ -29,7 +29,7 @@ export default function Checkout() {
       clearCart()
       navigate('/order-success')
     } catch (err) {
-      setError(err.message.includes('Failed to fetch') ? 'The order service is not running yet. Start the backend and configure Supabase, then try again.' : err.message)
+      setError(`${err.message} (calling: ${API_URL}/orders)`)
     } finally { setLoading(false) }
   }
 
